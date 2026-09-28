@@ -1,0 +1,60 @@
+p {
+  font-family: sans-serif;
+}
+
+.contenedor {
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto; /* Lo desplaza al centro */
+}
+
+.parte-izquierda {
+  width: 25%;
+  text-align: center;
+  background-color: #eaf4fb;
+}
+
+.parte-derecha {
+  width: 60%;
+  text-align: left;
+}
+
+.parte-arriba-derecha .presentacion {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.5)),
+    /* linear-gradient(c1, c2, c3, o1) el ultimo valor, el "o1" es la opacidad del elemento*/
+    url(../images/mountain.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right top;
+  padding: 40px 60px;
+}
+.parte-arriba-derecha .descripcion {
+  background-color: #0d477a;
+  padding: 1px;
+}
+
+.bloque1 > p {
+  color: #1972b9;
+  font-weight: bold;
+}
+
+.bloque2 > p {
+  font-size: 70px;
+  color: #1972b9;
+  margin: 0;
+}
+
+.bloque2 > p > strong {
+  color: #0d477a;
+}
+
+.bloque3 > p {
+  font-weight: bold;
+  color: #34566e;
+}
+
+.bloque4 {
+  display: flex;
+  color: #416593;
+}
