@@ -5,7 +5,9 @@ p {
 .contenedor {
   display: flex;
   max-width: 1400px;
-  margin: 0 auto; /* Lo desplaza al centro */
+  margin: 0 auto;
+  border: 1px solid #dbe5ed;
+  border-radius: 1%;
 }
 
 .parte-izquierda {
@@ -15,7 +17,7 @@ p {
 }
 
 .parte-derecha {
-  width: 60%;
+  width: 71%;
   text-align: left;
 }
 
@@ -29,27 +31,28 @@ p {
   background-position: right top;
   padding: 40px 60px;
 }
+
 .parte-arriba-derecha .descripcion {
   background-color: #0d477a;
   padding: 1px;
 }
 
-.bloque1 > p {
+.bloque1>p {
   color: #1972b9;
   font-weight: bold;
 }
 
-.bloque2 > p {
+.bloque2>p {
   font-size: 70px;
   color: #1972b9;
   margin: 0;
 }
 
-.bloque2 > p > strong {
+.bloque2>p>strong {
   color: #0d477a;
 }
 
-.bloque3 > p {
+.bloque3>p {
   font-weight: bold;
   color: #34566e;
 }
@@ -57,4 +60,101 @@ p {
 .bloque4 {
   display: flex;
   color: #416593;
+}
+
+.descripcion-t1 {
+  color: #b6c8d7;
+}
+
+.descripcion-t2 {
+  color: white;
+  font-size: 27px;
+}
+
+.descripcion {
+  display: flex;
+}
+
+.descripcion-izquierda {
+  margin: 50px 50px 50px 50px;
+  flex: 1;
+}
+
+.descripcion-derecha {
+  color: #e7edf2;
+  margin: 50px;
+  flex: 1;
+}
+
+.experiencia-profesional,
+.formacion-y-entrenamiento {
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.horizontal {
+  border: none;
+  border-bottom: 1.5px solid #dce5ed;
+}
+
+.experiencia-profesional-desglose {
+  border-left: 2px solid #cfe0eb;
+  padding-left: 20px;
+}
+
+.exp>h3 {
+  color: #08345d;
+  margin-bottom: 0px;
+}
+
+.exp>h4 {
+  color: #667789;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.exp>ul {
+  color: #526474;
+  margin-top: -5px;
+}
+
+.formacion-y-entrenamiento-display {
+  display: flex;
+  gap: 10px;
+}
+
+.bloque-formacion {
+  border: 1px solid #dbe5ed;
+  border-radius: 5%;
+  background-color: #fbfdfe;
+  flex: 1;
+}
+
+.logros-tecnicas {
+  display: flex;
+  margin-left: 50px;
+  gap: 40px
+}
+
+.logros-destacados,
+.tecnicas-y-transformaciones {
+  flex: 1;
+}
+
+
+.tecnicas-y-transformaciones-desglose {
+  border: 1px solid #bdd0de;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #0d477a;
+  
+}
+
+.entrenamientos-destacados {
+  margin-left: 50px;
+}
+
+.tabla {
+  border: 1px solid;
+  border-radius: 10px;
 }
