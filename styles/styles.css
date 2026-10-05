@@ -1,5 +1,27 @@
-p {
+
+/* Parte donde se decalaran las variables*/
+:root {
+
+--radio-tarjetas: 15px;
+--color-azul-oscuro: #0d477a;
+--color-gris: #b6c8d7;
+--color-gris-fuerte: gray;
+--color-rojo: red;
+--color-verde: green;
+--color-naranja: orange;
+
+}
+
+* {
   font-family: sans-serif;
+}
+
+*, *::before, *::after {
+box-sizing: border-box;
+}
+
+h2 {
+  color: var(--color-azul-oscuro);
 }
 
 .contenedor {
@@ -7,19 +29,48 @@ p {
   max-width: 1400px;
   margin: 0 auto;
   border: 1px solid #dbe5ed;
-  border-radius: 1%;
+  border-radius: var(--radio-tarjetas);
+  overflow: hidden; /* Para lograr el efecto de las esquinas redondeadas junto a los hijos */
 }
 
 .parte-izquierda {
-  width: 25%;
-  text-align: center;
+  flex: 1;
+  text-align: left;
   background-color: #eaf4fb;
+  padding: 20px;
 }
 
+.datos-personales {
+  font-size: 16px;
+}
+
+.datos-personales-desglose {
+  margin-bottom: 10px;
+}
+
+.datos-personales-desglose h3 {
+  color: var(--color-gris-fuerte);
+  font-size: 15px;
+  margin: 0px;
+}
+
+.datos-personales-desglose p {
+  font-size: 14px;
+  margin: 0px;
+}
+
+
 .parte-derecha {
-  width: 71%;
+  flex: 3;
   text-align: left;
 }
+
+.avatar img {
+  width: 100%;
+  border-radius: var(--radio-tarjetas);
+  display: block;
+}
+
 
 .parte-arriba-derecha .presentacion {
   background-image:
@@ -33,37 +84,37 @@ p {
 }
 
 .parte-arriba-derecha .descripcion {
-  background-color: #0d477a;
+  background-color: var(--color-azul-oscuro);
   padding: 1px;
 }
 
-.bloque1>p {
+.bloque1 > p {
   color: #1972b9;
   font-weight: bold;
 }
 
-.bloque2>p {
+.bloque2 > p {
   font-size: 70px;
   color: #1972b9;
   margin: 0;
 }
 
-.bloque2>p>strong {
-  color: #0d477a;
+.bloque2 > p > strong {
+  color: var(--color-azul-oscuro);
 }
 
-.bloque3>p {
+.bloque3 > p {
   font-weight: bold;
   color: #34566e;
 }
 
 .bloque4 {
   display: flex;
-  color: #416593;
+  color: var(--color-azul-oscuro);
 }
 
 .descripcion-t1 {
-  color: #b6c8d7;
+  color: var(--color-gris);
 }
 
 .descripcion-t2 {
@@ -102,18 +153,18 @@ p {
   padding-left: 20px;
 }
 
-.exp>h3 {
-  color: #08345d;
+.exp > h3 {
+  color:var(--color-azul-oscuro);
   margin-bottom: 0px;
 }
 
-.exp>h4 {
+.exp > h4 {
   color: #667789;
   margin-top: 5px;
   font-size: 14px;
 }
 
-.exp>ul {
+.exp > ul {
   color: #526474;
   margin-top: -5px;
 }
@@ -133,7 +184,7 @@ p {
 .logros-tecnicas {
   display: flex;
   margin-left: 50px;
-  gap: 40px
+  gap: 40px;
 }
 
 .logros-destacados,
@@ -141,20 +192,82 @@ p {
   flex: 1;
 }
 
+.tecnicas-y-transformaciones-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px
+}
 
 .tecnicas-y-transformaciones-desglose {
   border: 1px solid #bdd0de;
-  border-radius: 10px;
+  border-radius: 50px;
   font-weight: bold;
-  color: #0d477a;
-  
+  color: var(--color-azul-oscuro);
+  padding: 6px 16px;
+}
+
+.tecnicas-y-transformaciones-desglose p {
+  margin: 0;
 }
 
 .entrenamientos-destacados {
   margin-left: 50px;
 }
 
+.lista-logros li {
+  margin-bottom: 12px;
+  margin-left: -25px;
+  font-size: 19px;
+}
+
+.tabla-resultados {
+  display: flex;
+  border: 2px solid #dce5ed;
+  border-radius: var(--radio-tarjetas);
+  overflow: hidden;
+}
+
 .tabla {
-  border: 1px solid;
-  border-radius: 10px;
+  width: 100%;
+  flex: auto;
+  border-collapse: collapse;
+}
+
+.tabla th, 
+.tabla td {
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid;
+}
+
+.tabla th {
+  background-color: #dce5ed;
+  color: #667790
+}
+
+.tabla tr:last-child td {
+  border-bottom: none;
+}
+.parte-abajo-derecha {
+  padding: 40px 50px;
+}
+
+.derrota {
+color: var(--color-rojo);
+}
+
+.victoria {
+color: var(--color-verde);
+}
+
+.decisivo {
+color: var(--color-naranja);
+}
+
+@media (max-width: 768px) {
+  /*pantallas pequeñas*/
+  .contenedor {
+    background-color: red;
+    display: flex;
+  }
 }
