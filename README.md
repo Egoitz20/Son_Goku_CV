@@ -35,7 +35,6 @@ Son_Goku_CV/
 ├── examples/               # Diseños y modelos de referencia en PDF
 └── README.md               # Documentación del proyecto
 ```
-
 ---
 
 ## Tecnologías Utilizadas
